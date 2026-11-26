@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giftomania | Products</title>
+<link rel="stylesheet" href="asset/image/style.css">
+<style>
+    
+/* Giftomania - Product Page */
+
+/* Basic Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #faf4ed;
+    color: #392b30;
+    font-family: Georgia, "Times New Roman", serif;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Header */
+.header {
+    min-height: 65px;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: #fffaf4;
+    border-bottom: 1px solid #eadbd5;
+}
+
+.logo {
+    color: #4a333b;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo small {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-top: 3px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.navbar a {
+    color: #392b30;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #a47752;
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 22px;
+    color: #392b30;
+}
+
+/* Page Heading */
+.page-heading {
+    text-align: center;
+    padding: 65px 20px 45px;
+    background-color: #f3e7dc;
+}
+
+.small-title {
+    color: #a47752;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.page-heading h1 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.page-heading > p:last-child {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Categories Section */
+.categories {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.categories h2,
+.products h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.section-text {
+    color: #806d67;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+/* Category Cards */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.category-card {
+    display: block;
+    min-width: 0;
+    color: #392b30;
+    text-decoration: none;
+    background-color: #fffaf4;
+    border: 1px solid #eadbd5;
+    padding-bottom: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    font-size: 17px;
+    font-weight: normal;
+    margin-top: 15px;
+}
+
+/* Featured Products */
+.products {
+    padding: 45px 5% 65px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    align-items: stretch;
+}
+
+/* Product Card */
+.product-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fffaf4;
+    border: 1px solid #eadbd5;
+    text-align: left;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(57, 43, 48, 0.09);
+}
+
+.product-card > img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #f3e7dc;
+}
+
+/* Product Information */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding: 18px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #806d67;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.price {
+    color: #8b6247;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+.product-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4a333b;
+    color: #fffaf4;
+    border: 1px solid #4a333b;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.product-button:hover {
+    background-color: #fffaf4;
+    color: #4a333b;
+}
+
+/* Footer */
+.footer {
+    padding: 35px 20px;
+    text-align: center;
+    background-color: #4a333b;
+    color: #fffaf4;
+}
+
+.footer h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+.gallery-button{
+    text-align: right;
+    margin: 20px 0;
+}
+.gallery-button a{
+    display: inline-block;
+    background-color: #70483e;
+    color: #fff5f2;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 15px;
+}
+.gallery-button:hover{
+    background-color: #e8bfc1;
+    color: #4b2d27;
+    border-radius: 25px;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .header {
+        justify-content: center;
+    }
+
+    .category-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .category-card img {
+        height: 220px;
+    }
+
+    .product-card > img {
+        height: 240px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        padding: 18px 4%;
+        gap: 15px;
+    }
+
+    .navbar {
+        gap: 12px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .header-icons {
+        display: none;
+    }
+
+    .page-heading {
+        padding: 45px 15px 35px;
+    }
+
+    .page-heading h1 {
+        font-size: 32px;
+    }
+
+    .categories,
+    .products {
+        padding: 35px 4%;
+    }
+
+    .categories h2,
+    .products h2 {
+        font-size: 26px;
+    }
+
+    .category-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .category-card img {
+        height: 145px;
+    }
+
+    .category-card h3 {
+        font-size: 14px;
+    }
+
+    .product-card > img {
+        height: 150px;
+    }
+
+    .product-info {
+        padding: 12px;
+    }
+
+    .product-info h3 {
+        font-size: 15px;
+    }
+
+    .product-info p {
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .product-button {
+        width: 100%;
+        padding: 9px 5px;
+        font-size: 12px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            ♡ Giftomania
+            <small>GIFT WITH LOVE</small>
+        </a>
+
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-icons" >
+            <span>⌕</span>
+            <span>♙</span>
+            <span>♧</span>
+        </div>
+    </header>
+
+    <!-- Page Heading -->
+    <section class="page-heading">
+        <p class="small-title">A LITTLE SOMETHING SPECIAL</p>
+        <h1>Our Products</h1>
+        <p>Find the perfect gift for every special moment.</p>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <p class="section-text">Thoughtful gifts for everyone you love.</p>
+
+        <div class="category-grid">
+
+            <a href="#products" class="category-card">
+                <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80"
+                     alt="Gift box with ribbon">
+                <h3>For Her</h3>
+            </a>
+
+            <a href="#products" class="category-card">
+                <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=600&q=80"
+                     alt="Beautiful wrapped gift">
+                <h3>For Him</h3>
+            </a>
+
+            <a href="#products" class="category-card">
+                <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80"
+                     alt="Scented candle gift">
+                <h3>Home &amp; Living</h3>
+            </a>
+
+            <a href="#products" class="category-card">
+                <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?auto=format&fit=crop&w=600&q=80"
+                     alt="Gift hamper">
+                <h3>Gift Hampers</h3>
+            </a>
+
+        </div>
+    </section>
+
+   
+<section class="products" id="products">
+    <h2>Featured Gifts</h2>
+    <p class="section-text">Little things that make big memories.</p>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="asset/image/image8.png" alt="Elegant">
+            <div class="product-info">
+                <h3>Wooden Engraving Frame</h3>
+                <p>A beautiful surprise.</p>
+                <span class="price">₹799</span>
+                <div class="gallery-button">
+            <a href="gallery.html">View Gallery</a>
+        </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image9.png" alt="">
+            <div class="product-info">
+                <h3>Resin Varmala & Photo Preserve</h3>
+                <p>Preserve Beautiful memories.</p>
+                <span class="price">₹2499</span>
+                <div class="gallery-button">
+            <a href="gallery.html">View Gallery</a>
+        </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image10.png" alt="Scented Candle">
+            <div class="product-info">
+                <h3>Wall Photo Frame</h3>
+                <p>Add warmth to your special moments.</p>
+                <span class="price">₹699</span>
+                <div class="gallery-button">
+            <a href="gallery.html">View Gallery</a>
+        </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image11.png" alt="Gift Hamper">
+            <div class="product-info">
+                <h3>Table Led Lamp</h3>
+                <p>A lovely gift for your loved one's. </p>
+                <span class="price">₹499</span>
+                <div class="gallery-button">
+            <a href="gallery.html">View Gallery</a>
+        </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image_2.png" alt="Anniversary Gift">
+            <div class="product-info">
+                <h3>Anniversary Gift</h3>
+                <p>Celebrate beautiful memories together.</p>
+                <span class="price">₹699</span>
+                <div class="gallery-button">
+            <a href="gallery.html">View Gallery</a>
+        </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image_5.png" alt="Thank You Gift">
+            <div class="product-info">
+                <h3>Thank You Gift</h3>
+                <p>A little gift to show your gratitude.</p>
+                <span class="price">₹499</span>
+                <div class="gallery-button">
+            <a href="gallery.html">View Gallery</a>
+        </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image16.png" alt="A Thoughtful Gift">
+            <div class="product-info">
+                <h3>A Thoughtful Gift</h3>
+                <p>A little gift for your loved ones</p>
+                <span class="price">₹399</span>
+                <div class="gallery-button">
+            <a href="gallery.html">View Gallery</a>
+        </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image17.png" alt="Premium Hamper">
+            <div class="product-info">
+                <h3>Premium Hamper</h3>
+                <p>A special collection for your loved ones.</p>
+                <span class="price">₹1,999</span>
+                <div class="gallery-button">
+            <a href="gallery.html">View Gallery</a>
+        </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image14.png" alt="Festive Gift">
+            <div class="product-info">
+                <h3>Baby Gift</h3>
+                <p>A Special Keepsake for Your Little One.</p>
+                <span class="price">₹399</span>
+                <div class="gallery-button">
+            <a href="gallery.html">View Gallery</a>
+        </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image13.png" alt="Surprise Gift">
+            <div class="product-info">
+                <h3>Surprise Gift</h3>
+                <p>Make an ordinary day feel special.</p>
+                <span class="price">₹1999</span>
+                <div class="gallery-button">
+            <a href="gallery.html">View Gallery</a>
+        </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="asset/image/image19.png" alt="Self Love Gift">
+            <div class="product-info">
+                <h3>Self Love Gift</h3>
+                <p>A thoughtful treat for someone special.</p>
+                <span class="price">₹399</span>
+                <div class="gallery-button">
+            <a href="gallery.html">View Gallery</a>
+        </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image18.png" alt=" Gift for friends">
+            <div class="product-info">
+                <h3>Gift for friends</h3>
+                <p>Make every celebration unforgettable.</p>
+                <span class="price">₹799</span>
+                <div class="gallery-button">
+            <a href="gallery.html">View Gallery</a>
+        </div>
+            </div>
+        </div>
+        
+
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h2>♡ Giftomania</h2>
+        <p>Gift with love, make memories forever.</p>
+    </footer>
+
+</body>
+</html>

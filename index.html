@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giftomania | Thoughtful Gifts</title>
+    <link rel="stylesheet" href="asset/image/style.css">
+    <style>
+        
+/* Hero Section */
+.hero {
+    min-height: 330px;
+    display: grid;
+    grid-template-columns: 43% 57%;
+    background-color: #f2e2d8;
+    overflow: hidden;
+}
+
+.hero-content {
+    padding: 35px 10px 35px 8%;
+    align-self: center;
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+    color: #795963;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin-bottom: 14px;
+    font-size: clamp(28px, 3.4vw, 46px);
+    font-weight: normal;
+    line-height: 1.04;
+}
+
+.hero-description {
+    max-width: 290px;
+    margin-bottom: 18px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.shop-button {
+    display: inline-block;
+    padding: 11px 18px;
+    border-radius: 25px;
+    background-color: #936875;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.shop-button:hover {
+    background-color: #79515f;
+}
+
+.shop-button span {
+    margin-left: 7px;
+}
+
+.hero-photo {
+    height: 370px;
+    overflow: hidden;
+}
+
+.hero-photo img {
+    display: block;
+    width: 88%;
+    height: 370px;
+    object-fit: cover;
+    object-position: center;
+    margin-left: 105px;
+}
+
+/* Section Headings */
+.categories-section,
+.products-section {
+    padding: 23px 5%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.section-heading h2 {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.section-heading a {
+    color: #60434c;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+/* Categories */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.category-card {
+    min-width: 0;
+    padding: 9px 8px 13px;
+    border-radius: 60px 60px 13px 13px;
+    background-color: #f5e8dd;
+    text-align: center;
+}
+
+.category-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/* Service Benefits */
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0 5%;
+    padding: 17px 12px;
+    border-radius: 11px;
+    background-color: #e6d1d3;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.benefit span {
+    color: #76535e;
+    font-size: 22px;
+}
+
+/* Featured Gifts Slider */
+.products-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.products-track {
+    display: flex;
+    width: max-content;
+    animation: giftSlide 24s linear infinite;
+}
+
+.products-group {
+    display: flex;
+    flex-shrink: 0;
+    gap: 15px;
+    padding-right: 15px;
+}
+
+.products-group .product-card {
+    flex: 0 0 calc((90vw - 45px) / 4);
+    min-width: 0;
+}
+
+.product-card {
+    min-width: 0;
+}
+a:hover{
+    color: black;
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.price {
+    color: #60434c;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+/* Sliding Animation */
+@keyframes giftSlide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause when the mouse is over the slider */
+.products-slider:hover .products-track {
+    animation-play-state: paused;
+}
+
+/* Footer */
+footer {
+    padding: 23px 5%;
+    background-color: #e4c8cf;
+    text-align: center;
+}
+
+.footer-message {
+    margin-bottom: 8px;
+    color: #684c58;
+    font-size: 22px;
+    font-style: italic;
+}
+
+.footer-brand {
+    font-size: 12px;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#home" class="logo">
+            <span>♡</span> Giftomania
+            <small>GIFT WITH LOVE</small>
+        </a>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-icons">
+            <span>⌕</span>
+            <span>♙</span>
+            <span>♧</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+        
+            <div class="hero-content">
+                <p class="eyebrow">GIFTS THAT SPEAK</p>
+
+                <h1>
+                    Thoughtful<br>
+                    Gifts for Every<br>
+                    Occasion
+                </h1>
+
+                <p class="hero-description">
+                    Make your moments special with
+                    thoughtful gifts that speak from the heart.
+                </p>
+
+                <a href="contact.html" class="shop-button">
+                    Shop Now <span>→</span>
+                </a>
+            </div>
+
+            <div class="hero-photo">
+                <img src="asset/image/image1.png"
+                     alt="Pink gift box with golden ribbon and flowers">
+            </div>
+
+        </section>
+
+        <!-- Shop By Category -->
+        <section class="categories-section" id="about">
+
+            <div class="section-heading">
+                <h2>Shop By Category</h2>
+                <a href="#products">View All →</a>
+            </div>
+
+            <div class="categories">
+
+                <article class="category-card">
+                    <img src="asset/image/image19.png" alt="Gifts for her">
+                    <h3>For Her</h3>
+                </article>
+
+                <article class="category-card">
+                    <img src="asset/image/image10.png"
+                         alt="Personalized gift set">
+                    <h3>For Family</h3>
+                </article>
+
+                <article class="category-card">
+                    <img src="asset/image/image_4.png"
+                         alt="Decorative photo lamp">
+                    <h3>Home & Living</h3>
+                </article>
+
+                <article class="category-card">
+                    <img src="asset/image/image_3.png" alt="Gift hamper">
+                    <h3>Gift Hamper</h3>
+                </article>
+
+            </div>
+        </section>
+         
+        <section class="benefits" >
+            
+
+            <div class="benefit">
+                <span>♡</span>
+                <p>Premium Quality<br>Products</p>
+            </div>
+
+            <div class="benefit">
+                <span>♧</span>
+                <p>Secure Easy<br>Checkout</p>
+            </div>
+
+            <div class="benefit">
+                <span>♧</span>
+                <p>Fast Reliable<br>Delivery</p>
+            </div>
+            </section>
+            
+         <section class="products-section" id="products">
+
+            <div class="section-heading">
+                <h2>Featured Gifts</h2>
+                <a href="#products">View All →</a>
+            </div>
+
+            <div class="products-slider">
+
+                <div class="products-track">
+                    <div class="products-group">
+
+                        <article class="product-card">
+                            <img src="asset/image/image_7.png"
+                                 alt="Resin Varmala and Photo Preserve">
+                            <h3>Resin Varmala &amp; Photo Preserve</h3>
+                            <p class="price">Price to be added</p>
+                        </article>
+
+                        <article class="product-card">
+                            <img src="asset/image/image_4.png"
+                                 alt="Name and Photo Mugs">
+                            <h3>Name &amp; Photo Mugs</h3>
+                            <p class="price">Price to be added</p>
+                        </article>
+
+                        <article class="product-card">
+                            <img src="asset/image/image_5.png"
+                                 alt="Wood Craft">
+                            <h3>Wood Craft</h3>
+                            <p class="price">Price to be added</p>
+                        </article>
+
+                        <article class="product-card">
+                            <img src="asset/image/image_2.png"
+                                 alt="Table LED Lamp">
+                            <h3>Table LED Lamp</h3>
+                            <p class="price">Price to be added</p>
+                        </article>
+
+                    </div>
+
+                    <!-- Second set for continuous sliding -->
+                    <div class="products-group" aria-hidden="true">
+
+                        <article class="product-card">
+                            <img src="asset/image/image13.png" alt="Resin Varmala Photo Preserve">
+                            <h3>Resin Varmala &amp; Photo Preserve</h3>
+                            <p class="price">Price to be added</p>
+                        </article>
+
+                        <article class="product-card">
+                            <img src="asset/image/image_4.png" alt="Photo Mugs">
+                            <h3>Name &amp; Photo Mugs</h3>
+                            <p class="price">Price to be added</p>
+                        </article>
+
+                        <article class="product-card">
+                            <img src="asset/image/image8.png"
+                                 alt="Wood Craft">
+                            <h3>Wood Craft</h3>
+                            <p class="price">Price to be added</p>
+                        </article>
+
+                        <article class="product-card">
+                            <img src="asset/image/image11.png"
+                                 alt="Table LED Lamp">
+                            <h3>Table LED Lamp</h3>
+                            <p class="price">Price to be added</p>
+                        </article>
+
+                    </div>
+
+                </div>
+            </div>
+          </section>  
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p class="footer-message">Small gifts, Big smiles.</p>
+        <p class="footer-brand">Giftomania ♡</p>
+    </footer>
+
+</body>
+</html>

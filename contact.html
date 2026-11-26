@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="asset/image/style.css">
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff7f5;
+            color: #56382f;
+        }
+        .contact-heading{
+            text-align: center;
+            background: #f2d5d3;
+            padding: 30px 15px;
+        }
+       .contact-heading h1{
+            font-size: 36px;
+            margin: 0 0 10px;
+        }
+        .contact-heading p{
+            margin: 0;
+        }
+        .contact{
+            display: flex;
+            gap: 25px;
+            margin: 30px auto;
+            padding: 0 25px;
+            align-items: stretch;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+        }
+        .left,.right{
+            flex: 1;
+            min-width: 0;
+            padding: 25px;
+            box-sizing: border-box;
+            border-radius: 15px;
+        }
+        .left{
+            background: #fbe9e6;
+            line-height: 1.5;
+        }
+        .left h2,.right h2{
+            margin-top: 0;
+            color: #704638;
+        }
+        .detail{
+            background: #fff7f5;
+            padding: 10px 15px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+        .detail h3{
+            margin: 0 0 5px;
+        }
+        /* .detail a{
+            color: #704638;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+        .detail a:hover{
+            color: #a66b5b;
+            text-decoration: underline;
+        }
+        .detail p{
+            margin: 0;
+            overflow-wrap: anywhere;
+        } */
+         .contact-link{
+            color: #704638;
+            text-decoration: none;
+            font-size: 15px;
+            overflow-wrap: anywhere;
+         }
+         .contact-link:hover{
+            color: #a66b5b;
+            text-decoration: underline;
+         }
+        .right{
+            background: white;
+            box-shadow: 0 4px 15px #56382f;
+            width: 35%;
+            max-width: 650px;
+            box-sizing: border-box;
+            margin-left: auto;
+            flex-shrink: 0;
+            transform: translateX(-20px);
+        }
+        .right form{
+            margin-top: 20px;
+    
+            
+        }
+        .right input,.right textarea{
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px;
+            margin-top: 15px;
+            border: 1px solid #e5c4be;
+            border-radius: 7px;
+            background: #fff7f5;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+
+         }
+         .right textarea{
+            height: 120px;
+            resize: vertical;
+         }
+         .right button{
+            width: 100%;
+            padding: 13px;
+            margin-top: 15px;
+            background: #704638;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+         }
+        .right button:hover{
+            background: #4e3028;
+         }
+         .map{
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            margin: 30px auto;
+            padding: 25px;
+            background: #fbe9e6;
+            box-sizing: border-box;
+         }
+         .map div{
+            flex: 1;
+         }
+         .map iframe{
+            flex: 2;
+            width: 60%;
+            min-width: 0;
+            border: 0;
+            border-radius: 10px;
+         }
+         footer{
+            text-align: center;
+            padding: 18px;
+            background: #704638;
+            color: white;
+         }
+         .contact-link , .contact-link:visited,.contact-link:active ,.contact-link:link,.contact-link:hover{
+            color: #704638;
+            text-decoration: none;
+            /* font-size: 15px; */
+            font-weight: normal;
+            /* overflow-wrap: anywhere; */
+         }
+         .contact-link:hover{
+            color: #a66b5b;
+            text-decoration: underline;
+            cursor: pointer;
+         }
+
+         @media(max-width:700px){
+            .contact{
+                flex-direction: column;
+                padding: 0 15px;
+            }
+            .left,.right{
+                width: 100%;
+            }
+            .map{
+                flex-direction: column;
+                margin: 20px 15px;
+            }
+            .map div,.map iframe{
+                width: 100%;
+                flex: auto;
+            }
+            .contact-heading{
+                font-size: 28px;
+            }
+         }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">
+            <span>♡</span> Giftomania
+            <small>GIFT WITH LOVE</small>
+        </a>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-icons">
+            <span>⌕</span>
+            <span>♙</span>
+            <span>♧</span>
+            
+        </div>
+       
+    </header>
+    <div class="contact-heading">
+         <h1>Get in Touch</h1>
+            <p>Let's make someone's day special!♡</p>
+    </div>
+    <div class="contact">
+        <div class="info">
+            <h2>Let's Talk</h2>
+            <p>Looking for a special gift.We are here to help you!</p>
+            <div class="detail">
+                 <h3>Call Us </h3>
+                <p><a class="contact-link" 
+                    href="https://wa.me/917568605894" target="_blank">+91 7568605894</a></p>
+            </div> 
+            <div class="detail">
+                <h3>Email Us</h3>
+                <p><a  class="contact-link" 
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=giftomaniaajmer2021@gmail.com" target="_blank">giftomaniaajmer2021@gmail.com</a></p>
+            </div> 
+           
+            <div class="detail">
+                <h3>Visit Us</h3>
+                <p>Gali No. 5,Ramnagar Road, <br> Ajmer,Rajasthan 305001</p>
+            </div>
+            <div class="detail">
+                <h3>Opening Hours</h3> 
+                <p>Monday-Saturday <br>10AM-7PM</p>
+            </div>
+        </div>
+        <div class="right">
+            <h2>Make a Gift Enquiry</h2>
+            <p>Tell us how we can help you.</p>
+             <form action="mailto:giftomaniaajmer2021@gmail.com"
+              method="post" enctype="text/plain">
+
+            <label>Your Name *</label>
+            <input type="text" name="Name"
+                   placeholder="Enter your name" required>
+
+            <label>Email Address *</label>
+            <input type="email" name="Email"
+                   placeholder="Enter your email" required>
+
+            <label>Message *</label>
+            <textarea name="Message" rows="5"
+                      placeholder="Write your message..."
+                      required></textarea>
+
+            <button type="submit">Send Message →</button>
+        </form>
+        </div>
+    </div>
+    <div class="map">
+        <div>
+            <h2>Find our Store</h2>
+            <p>We look forward to helping you find the perfect gift!</p>
+        </div>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.631362302928!2d74.61131977520824!3d26.467609176915268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396be700496fc733%3A0x8d1eceb5416d48a8!2sGiftomania%20%7C%20Best%20Gift%20Shop%20in%20Ajmer%20%7C%20Gifts%20for%20Freinds%20and%20Love!5e0!3m2!1sen!2sin!4v1792642086196!5m2!1sen!2sin" width="100" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        
+    </div>
+    <footer>
+        Made with ♡ by Giftomania
+    </footer>
+</body>
+</html>

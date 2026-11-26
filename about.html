@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="asset/image/style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+           font-family: Arial, Helvetica, sans-serif;
+           background-color: #fffaf2;
+           color: #49352b;
+           line-height: 1.6; 
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        a{
+            text-decoration: none;
+        }
+        .header-button{
+            background-color: #244a38;
+            color: #fffaf2;
+            padding: 11px 18px;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+        .intro{
+            text-align: center;
+            width: 90%;
+            margin: 65px auto 45px;
+            padding: 0 20px;
+        }
+        .small-heading{
+            color: #9a7545;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+        .intro h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #244a38;
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .intro h1 span{
+            color: #a57d4d;
+            font-style: italic;
+        }
+        .intro-text{
+            max-width: 580px;
+            margin: auto;
+            color: #76665a;
+            font-size: 15px;
+        }
+        .bento{
+            width: 100%;
+            /* max-width: 1200px; */
+            margin: 0 auto 90px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-auto-rows: 190px;
+            gap: 16px;
+        }
+        .box{
+            border-radius: 18px;
+            overflow: hidden;
+        }
+        .story{
+            grid-column: span 2;
+            grid-row: span 2;
+            background-color: #e9dfd0;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .story h2,.quote h2,.note h2{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 29px;
+            line-height: 1.25;
+            color: #244a38;
+            margin-bottom: 15px;
+        }
+        .story p:not(.small-heading){
+            font-size: 14px;
+            color: #76665a;
+            margin-bottom: 18px;
+        }
+        .text-link{
+            color: #244a38;
+            font-size: 13px;
+            font-weight: bold;
+            border-bottom: 1px solid #a57d4d;
+            padding-bottom: 4px;
+        }
+        .hero-photo{
+            grid-column: span 2;
+            grid-row: span 2;
+            position: relative;
+            background-color: #e9dfd0;
+        }
+        .hero-photo img{
+            position: absolute;
+            inset: 0;
+        }
+        .photo-label{
+            position: absolute;
+            left: 18px;
+            right: 18px;
+            bottom: 18px;
+            background-color: rgba(255,250,242,0.94);
+            padding: 14px 18px;
+            border-radius: 10px;
+        }
+        .photo-label span{
+            color: #9a7545;
+            font-size: 10px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        .photo-label p{
+            color: #244a38;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 17px;
+        }
+        .value{
+            background-color: #244a38;
+            color: #fffaf2;
+            padding: 20px;
+        }
+        .icon{
+            font-size: 30px;
+            color: #e8d4ae;
+            margin-bottom: 8px;
+        }
+        .value h3,.creative h3{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 19px;
+            margin-bottom: 5px;
+        }
+        .value p,.creative p{
+            font-size: 12px;
+        }
+        .product-photo{
+            background-color: #e8d4ae;
+        }
+        .quote{
+            grid-column: span 2;
+            background-color: #f1e8da;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .quote h2{
+            font-size: 23px;
+        }
+        .quote span{
+            font-size: 12px;
+            color: #9a7545;
+        }
+        .product {
+            grid-column: span 2;
+            display: flex;
+            background-color: #e9dfd0;
+
+        }
+        .product img{
+            width: 50%;
+        }
+        .product-caption{
+            padding: 18px;
+            align-self: center;
+        }
+        .product-caption h3{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color:#244a38;
+            font-size: 19px;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+        .product-caption p{
+            font-size: 12px;
+            color: #76665a;
+        }
+        /* .creative {
+            grid-column: span 2;
+            display: flex;
+            background-color: #e9dfd0;
+
+        }
+        .creative img{
+            width: 50%;
+        }
+        .creative-caption{
+            padding: 18px;
+            align-self: center;
+        }
+        .creative-caption h3{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color:#244a38;
+            font-size: 19px;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+        .creative-caption p{
+            font-size: 12px;
+            color: #76665a;
+        } */
+        
+
+        .creative{
+            background-color: #e8d4ae;
+            padding: 20px;
+        } 
+       
+        .creative .icon{
+            color: #244a38;
+        }
+         .creative-caption h3{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color:#244a38;
+            font-size: 19px;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        } 
+        .creative h3{
+            color: #244a38;
+        } 
+         .creative p{
+            color: #76665a;
+        } 
+        .note{
+            grid-column: span 2;
+            background-color: #49352b;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+        .note .small-heading{
+            color: #e8d4ae;
+        }
+        .note h2{
+            color: #fffaf2;
+            font-size: 24px;
+        }
+        .note p:not(.small-heading){
+            color: #e9dfd0;
+            font-size: 13px;
+        }
+        .journey{
+            padding: 65px 7%;
+            background-color: #f1e8da;
+
+        }
+        .section-title{
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        .section-title h2{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 36px;
+            color: #244a38;
+            margin-bottom: 8px;
+        }
+        .section-title>p:last-child{
+            color: #76665a;
+            font-size: 14px;
+        }
+        .steps{
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 18px;
+        }
+        .step{
+            background-color: #fffaf2;
+            padding: 28px;
+            border-radius: 14px;
+            border: 1px solid #e6d9c6;
+        }
+        .step span{
+            color: #244a38;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 21px;
+            margin: 10px 0;
+        }
+        .step p{
+            color: #76665a;
+            font-size: 13px;
+        }
+        .cta{
+            text-align: center;
+            background-color: #244a38;
+            padding: 65px 20px;
+            color: #fffaf2;
+        }
+        .cta .small-heading{
+            color: #e8d4ae;
+        }
+        .cta h2{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .cta>p:not(.small-heading){
+            color: #e9dfd0;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        .cta-button{
+            display: inline-block;
+            background-color: #e8d4ae;
+            color: #244a38;
+            padding: 13px 22px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        .cta-button:hover,.header-button:hover{
+            opacity: 0.85;
+        }
+        .footer{
+            background-color: #fffaf2;
+            text-align: center;
+            padding: 30px 20px;
+
+        }
+        .footer .logo{
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        .footer p{
+            font-size: 12px;
+            color: #76665a;
+        }
+        .footer .copyright{
+            margin-top: 15px;
+            color: #9a8a7d;
+        }
+        @media (max-width:900px){
+            .header{
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .navbar{
+                justify-content: center;
+            }
+            .bento{
+                width: 92%;
+                grid-template-columns: repeat(2,1fr);
+                grid-auto-rows: 190px;
+            }
+            .story,.hero-photo{
+                grid-column: span 2;
+            }
+            .quote,.product,.note{
+                grid-column: span 2;
+            }
+        }
+        /* Mobile */
+        @media(max-width:600px){
+            .header{
+                padding: 18px 5%;
+            }
+            .navbar{
+                gap: 12px;
+            }
+            .navbar a{
+                font-size: 12px;
+            }
+            .header-button{
+                display: none;
+            }
+            .intro{
+                margin: 45px auto 30px;
+            }
+            .intro h1{
+                font-size: 34px;
+            }
+            .bento{
+                width: 90%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: 160px;
+                gap: 10px;
+                margin-bottom: 55px;
+            }
+            .story{
+                grid-column: span 2;
+                grid-row: span 2;
+                padding: 22px;
+
+            }
+            .story h2{
+                font-size: 25px;
+            }
+            .hero-photo{
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            .value,.product-photo,.creative{
+                grid-column: span 1;
+            }
+            .value,.creative{
+                padding: 14px;
+            }
+            .value h3,.creative h3{
+                font-size: 16px;
+            }
+            .value p,.creative p{
+                font-size: 11px;
+            }
+            .quote,.product,.note{
+                grid-column: span 2;
+            }
+            .quote h2,.note h2{
+                font-size: 22px;
+            }
+            .product-caption{
+                padding: 12px;
+            }
+            .product-caption h3{
+                font-size: 16px;
+            }
+            .journey{
+                padding: 45px 5%;
+            }
+            .section-title{
+                font-size: 29px;
+            }
+            .steps{
+                grid-template-columns: 1fr;
+            }
+            .cta{
+                padding: 50px 20px;
+            }
+            .cta h2{
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">
+            <span>♡</span> Giftomania
+            <small>GIFT WITH LOVE</small>
+        </a>
+
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-icons">
+            <span>⌕</span>
+            <span>♙</span>
+            <span>♧</span>
+        </div>
+    </header>
+    <main>
+        <div class="intro">
+            <p class="small-heading">A Little About Us</p>
+            <h1>More than just a gift,<br><span>A feeling to remember.</span></h1>
+            <p class="intro-text">At Giftomania,we believe the most beautiful gifts are the ones
+                that feel personal.We help turn your thoughtful ideas into meaningful little suprises.
+            </p>
+            <section>
+                <section class="bento">
+                    <div class="box story">
+                        <p class="small-heading">OUR STORY</p>
+                        <h2>Thoughtful gifts. <br>Meaningful moments.</h2>
+                        <p>Giftomania is all about making gifting feel special.
+                            From personalised hampers to custom frames and resin art,
+                            we bring your ideas to life with care and creativity.
+                        </p>
+                        <a href="products.html" class="text-link">Explore our gifts</a>
+                    </div>
+                    <div class="box hero-photo">
+                        <img src="asset/image/image1.png" alt="">
+                        <div class="photo-label">
+                            <span>The Giftomania Touch</span>
+                            <p>Made personal,made memorable</p>
+                        </div>
+                    </div>
+                    <div class="box value">
+                        <div class="icon">♡</div>
+                        <h3>Made with thought</h3>
+                        <p>Little details that make a gift feel like yours.</p>
+                    </div>
+                    <div class="box product-photo">
+                        <img src="asset/image/image8.png" alt="Wood craft">
+                    </div>
+                    <div class="box quote">
+                        <p class="small-heading">OUR PHILOSOPHY</p>
+                        <h2>"It's not just what you give,it's how you make them feel."</h2>
+                        <span>- The Giftomania idea</span>
+                    </div>
+                    <div class="box product">
+                        <img src="asset/image/image_3.png" alt="Customise hamper">
+                        <div class="product-caption">
+                            <h3>Personalized hampers</h3>
+                            <p>Little surprises,thoughtfully put together.</p>
+                        </div>
+            
+                    <!-- <div class="box-creative">
+                        <! <img src="asset/image/image9.png" alt=""> -->
+                        <!-- <div class="icon">*</div>
+                        <h3>a little creativity</h3>
+                        <p>From resin art to custom keepsakes, make it uniquely yours. </p>
+                    </div> --> 
+                    </div>
+                    <div class="box note">
+                        <p class="small-heading">OUR PROMISES</p>
+                        <h2>Your idea, with a personal touch.</h2>
+                        <p>Tell us what you are imagining and let's create something meaningful.</p>
+                    </div>
+                </section>
+                <!-- How it works -->
+                 <div class="journey">
+                    <div class="section-title">
+                        <p class="small-heading">MADE YOUR WAY</p>
+                        <h2>Your idea becomes a gift.</h2>
+                        <p>A few simple steps to make your surprise feel personal.</p>
+                    </div>
+                    <div class="steps">
+                        <div class="step">
+                            <span>01</span>
+                            <h3>Choose</h3>
+                            <p>Pick a gift or share your own idea</p>
+                        </div>
+                         <div class="step">
+                            <span>02</span>
+                            <h3>Personalise</h3>
+                            <p>Add names, messages,colours or special details.</p>
+                        </div>
+                         <div class="step">
+                            <span>03</span>
+                            <h3>Make it special</h3>
+                            <p>We help shape your idea into thoughtful gift.</p>
+                        </div>
+                    </div>
+                 </div>
+            </section>
+            <!-- Call to action -->
+             <section class="cta">
+                <p class="small-heading">YOUR NEXT SPECIAL MOMENT</p>
+                <h2>Let's make it personal</h2>
+                <p>Find a gift that says what word sometimes can't.</p>
+                <a href="products.html" class="cta-button">Explore our collection</a>
+             </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <a href="#" class="logo">Giftomania <span>.</span></a>
+        <p>Thoughtful gifting, made personal.</p>
+        <p class="copyright">2026 Giftomania.Made with care</p>
+    </footer>
+
+</body>
+</html>

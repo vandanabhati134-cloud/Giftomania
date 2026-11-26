@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .gallery-section{
+        background-color: #fff8f6;
+        padding: 50px 6%;
+        text-align: center;
+        
+       }
+       .gallery-section h1{
+        color: #4b2d27;
+        font-size: 26px;
+        margin-bottom: 10px;
+       }
+       .gallery-section p{
+        color: #80645c;
+        font-size: 16px;
+        margin-bottom: 35px;
+       }
+       
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    align-items: stretch;
+}
+
+/* Product Card */
+.product-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fffaf4;
+    border: 1px solid #eadbd5;
+    text-align: left;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(57, 43, 48, 0.09);
+}
+
+.product-card > img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #f3e7dc;
+}
+
+/* Product Information */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding: 18px;
+}
+
+.product-info h2 {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #806d67;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.price {
+    color: #8b6247;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+/* Header */
+.header {
+    min-height: 65px;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: #f2d5d3;
+    border-bottom: 1px solid #eadbd5;
+}
+.header h1{
+    font-size: 30px;
+    color: #4b2d27;
+}
+.footer {
+    padding: 35px 20px;
+    text-align: center;
+    background-color: #f2d5d3;
+    color: #4a333b;
+    
+}
+
+.footer h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+.back-button {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #fffaf4;
+    border: 1px solid #4a333b;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #8e7666;
+    
+}
+.back-button a{
+    text-decoration: none;
+    color: #4b2d27;
+    
+}
+@media(max-width:900px){
+    .gallery-grid{
+        grid-template-columns: repeat(2,1fr);
+        gap: 18px;
+    }
+    .gallery-item img{
+        height: 240px;
+    }
+    .gallery-heading h1{
+        font-size: 32px;
+    }
+}
+@media (max-width:550px) {
+    header{
+        justify-content: center;
+        text-align: center;
+    }
+    nav{
+        justify-content: center;
+        gap: 15px;
+    }
+    .gallery-heading{
+        padding-top: 45px;
+    }
+    .gallery-heading h1{
+        font-size: 28px;
+    }
+    .gallery-section{
+        padding: 15px 4% 45px;
+    }
+    .gallery-grid{
+        grid-template-columns: repeat(2,1fr);
+        gap: 12px;
+    }
+    .gallery-item{
+        border-radius: 10px;
+    }
+    .gallery-item img{
+        height: 160px;
+    }
+    .product-card{
+        padding: 12px 6px;
+    }
+    .product-card h3{
+        font-size: 14px;
+    }
+    .product-card p{
+        font-size: 11px;
+    }
+    
+}
+   
+    </style>
+</head>
+<body>
+     <!-- Header -->
+    <header class="header">
+        
+          <h1>♡ Our Collection</h1> 
+            </header>
+     <!-- Photo gallery -->
+       <section class="products" id="products">
+
+    <div class="product-grid">
+         <div class="product-card">
+            <img src="asset/image/image22.png" alt=" Gift for friends">
+            <div class="product-info">
+                <h2>A perfect and thoughtful gift</h2>
+                <span class="price">₹1200</span>
+            </div>
+        </div>
+         <div class="product-card">
+            <img src="asset/image/image21.png" alt=" Gift for friends">
+            <div class="product-info">
+                <h2>Cute yet beautiful gift.</h2>
+                <span class="price">₹699</span>
+            </div>
+        </div>
+         <div class="product-card">
+            <img src="asset/image/image23.png" alt=" Gift for friends">
+            <div class="product-info">
+                <h2>Impressive gift for your loved people.</h2>
+                <span class="price">₹850</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="asset/image/image24.png" alt=" Gift for friends">
+            <div class="product-info">
+                <h2>Beautiful gift for beautiful person.</h2>
+                <span class="price">₹599</span>
+            </div>
+        </div>
+         <div class="product-card">
+            <img src="asset/image/image_4.png" alt=" Gift for friends">
+            <div class="product-info">
+                <h2>A Customised clock for you.</h2>
+                <span class="price">₹990</span>
+            </div>
+        </div>
+         <div class="product-card">
+            <img src="asset/image/image_6.png" alt=" Gift for friends">
+            <div class="product-info">
+                <h2>Anniversary gift for your soulmate.</h2>
+                <span class="price">₹1119</span>
+            </div>
+        </div>
+         <div class="product-card">
+            <img src="asset/image/image12.png" alt=" Gift for friends">
+            <div class="product-info">
+                <h2>A memorable gift for your baby.</h2>
+                <span class="price">₹1550</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="asset/image/image15.png " alt=" Gift for friends">
+            <div class="product-info">
+                <h2>Customised name bottles.</h2>
+                <span class="price">₹569</span>
+            </div>
+        </div>
+
+
+        <div class="product-card">
+            <img src="asset/image/image8.png" alt="Elegant">
+            <div class="product-info">
+                <h2>Wooden Engraving Frame</h2>
+                <span class="price">₹799</span>
+               
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image9.png" alt="">
+            <div class="product-info">
+                <h2>Resin Varmala & Photo Preserve</h2>
+                <span class="price">₹2499</span>
+              
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image10.png" alt="Scented Candle">
+            <div class="product-info">
+                <h2>Wall Photo Frame</h2>
+                <span class="price">₹699</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image11.png" alt="Gift Hamper">
+            <div class="product-info">
+                <h2>Table Led Lamp</h2>
+                <span class="price">₹499</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image_2.png" alt="Anniversary Gift">
+            <div class="product-info">
+                <h2>Anniversary Gift</h2>
+                <span class="price">₹699</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image_5.png" alt="Thank You Gift">
+            <div class="product-info">
+                <h2>Thank You Gift</h2>
+                <span class="price">₹499</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image16.png" alt="A Thoughtful Gift">
+            <div class="product-info">
+                <h2>A Thoughtful Gift</h2>
+                <span class="price">₹399</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image17.png" alt="Premium Hamper">
+            <div class="product-info">
+                <h2>Premium Hamper</h2>
+                <span class="price">₹1,999</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image14.png" alt="Festive Gift">
+            <div class="product-info">
+                <h2>Baby Gift</h2>
+                <span class="price">₹399</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image13.png" alt="Surprise Gift">
+            <div class="product-info">
+                <h2>Surprise Gift</h2>
+                <span class="price">₹1999</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="asset/image/image19.png" alt="Self Love Gift">
+            <div class="product-info">
+                <h2>Self Love Gift</h2>
+                <span class="price">₹399</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/image/image18.png" alt=" Gift for friends">
+            <div class="product-info">
+                <h2>Gift for friends</h2>
+                <span class="price">₹799</span>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+   <footer class="footer">
+        <h2>♡ Giftomania</h2>
+        <p>Gift with love, make memories forever.</p>
+        <p class="back-button"><a href="products.html">Back to Products</a></p>
+    </footer>
+
+
+    
+</body>
+</html>
